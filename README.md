@@ -268,7 +268,7 @@ The complete experimental demonstration is available below.
 │
 ├── STL/
 │
-├── docs/
+├── Docs/
 │
 └── README.md
 ```
