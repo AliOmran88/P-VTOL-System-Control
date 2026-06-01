@@ -119,7 +119,7 @@ Additional implementation features include:
 
 ### System Block Diagram
 
-![System Block Diagram](images/SystemBD.png)
+![System Block Diagram](images/SystemBD2.jpeg)
 
 ---
 
