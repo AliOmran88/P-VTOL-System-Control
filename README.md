@@ -131,6 +131,7 @@ The complete controller implementation is located inside the **Controller** dire
 Controller/
 ├── RootLocusSF.vi
 ├── UI_VISA.vi
+├── SF_Servo.vi
 └── SF_Control/
     └── SF_Control.ino
 ```
@@ -159,6 +160,16 @@ This VI was used to determine suitable controller gains before implementing them
 ### Access File
 
 [Open RootLocusSF.vi](Controller/RootLocusSF.vi)
+
+---
+
+### Tracking Problem Simulation VI
+
+![Tracking Simulation](images/SF_Servo.png)
+
+### Access File
+
+[Open SF_Servo.vi](Controller/SF_Servo.vi)
 
 ---
 
