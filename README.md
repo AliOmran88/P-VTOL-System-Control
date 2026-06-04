@@ -163,9 +163,14 @@ This VI was used to determine suitable controller gains before implementing them
 
 ---
 
+## SF_Servo.vi
+
+This LabVIEW VI was developed for simulating tracking problem of the system (as it is type 1, with integrator).
+
 ### Tracking Problem Simulation VI
 
 ![Tracking Simulation](images/SF_Servo.png)
+![Block Diagram](images/Servo_BD.png)
 
 ### Access File
 
