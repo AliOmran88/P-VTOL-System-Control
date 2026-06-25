@@ -34,12 +34,12 @@ const unsigned long Ts_ms = 20;
 
 // State Feedback Parameters
 float theta_ref = 0;
-float K_theta = 0.7;
-float K_omega = 1.5;
+float K_theta = 0.4;
+float K_omega = 0.8;
 
 // ESC Parameters
 
-int u0 = 1060;
+int u0 = 1100;
 
 int u_min = 1000;
 int u_max = 1300;
