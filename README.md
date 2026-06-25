@@ -309,6 +309,9 @@ Possible extensions of this project include:
 
 **Ali Gamal Ali**
 
+Mail: 
+ali.gamal@ejust.edu.eg
+
 LinkedIn:
 https://www.linkedin.com/in/ali-gamal
 
