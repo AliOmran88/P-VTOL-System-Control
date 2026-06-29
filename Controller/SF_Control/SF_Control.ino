@@ -19,7 +19,7 @@ float baseY = 0.0;
 float gyroY_offset = 0.0;
 
 // Complementary filter coefficient
-float alpha = 0.95;
+float alpha = 0.99;
 
 // Motors
 const int motor1Pin = 9;
@@ -44,7 +44,7 @@ int u0 = 1100;
 int u_min = 1000;
 int u_max = 1300;
 
-float pwm_slew = 3.0;
+float pwm_slew = 6.0;
 float u1_prev = 1000;
 float u2_prev = 1000;
 
@@ -213,7 +213,7 @@ void loop()
     omega_deg = -((GyY - gyroY_offset) / 131.0);
 
     // 4. Gyro Deadband
-    if (abs(omega_deg) < 0.03)
+    if (abs(omega_deg) < 0.5)
     {
       omega_deg = 0.0;
     }
@@ -229,7 +229,12 @@ void loop()
     }
 
     // 7. Convert omega to rad/s
-    omega = omega_deg * DEG_TO_RAD;
+    //omega = omega_deg * DEG_TO_RAD;
+    static float omega_f = 0;
+
+    omega_f = 0.9*omega_f + 0.1*omega_deg;
+
+    omega = omega_f * DEG_TO_RAD;
 
     //readSerialData();
 
@@ -239,6 +244,7 @@ void loop()
     // 9. Differential Motor Commands
     int u1 = u0 + du;
     int u2 = u0 - du;
+    //kjkhigh
 
     // ESC saturation
     u1 = constrain(u1, u_min, u_max);
